@@ -1,0 +1,234 @@
+{
+  "baseline": {
+    "val": {
+      "accuracy": 0.34782608695652173,
+      "precision_macro": 0.11594202898550725,
+      "recall_macro": 0.3333333333333333,
+      "f1_macro": 0.17204301075268816,
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          7,
+          0,
+          0
+        ]
+      ],
+      "class_names": [
+        "setosa",
+        "versicolor",
+        "virginica"
+      ]
+    },
+    "test": {
+      "accuracy": 0.30434782608695654,
+      "precision_macro": 0.10144927536231885,
+      "recall_macro": 0.3333333333333333,
+      "f1_macro": 0.15555555555555556,
+      "confusion_matrix": [
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          8,
+          0,
+          0
+        ]
+      ],
+      "class_names": [
+        "setosa",
+        "versicolor",
+        "virginica"
+      ]
+    }
+  },
+  "KNN": {
+    "val": {
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          7
+        ]
+      ],
+      "class_names": [
+        "setosa",
+        "versicolor",
+        "virginica"
+      ]
+    },
+    "test": {
+      "accuracy": 0.9565217391304348,
+      "precision_macro": 0.9629629629629629,
+      "recall_macro": 0.9583333333333334,
+      "f1_macro": 0.9581699346405229,
+      "confusion_matrix": [
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          1,
+          7
+        ]
+      ],
+      "class_names": [
+        "setosa",
+        "versicolor",
+        "virginica"
+      ]
+    }
+  },
+  "LogisticRegression": {
+    "val": {
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          7
+        ]
+      ],
+      "class_names": [
+        "setosa",
+        "versicolor",
+        "virginica"
+      ]
+    },
+    "test": {
+      "accuracy": 0.9130434782608695,
+      "precision_macro": 0.9166666666666666,
+      "recall_macro": 0.9166666666666666,
+      "f1_macro": 0.9166666666666666,
+      "confusion_matrix": [
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          1
+        ],
+        [
+          0,
+          1,
+          7
+        ]
+      ],
+      "class_names": [
+        "setosa",
+        "versicolor",
+        "virginica"
+      ]
+    }
+  },
+  "GaussianNB": {
+    "val": {
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          7
+        ]
+      ],
+      "class_names": [
+        "setosa",
+        "versicolor",
+        "virginica"
+      ]
+    },
+    "test": {
+      "accuracy": 0.9565217391304348,
+      "precision_macro": 0.9629629629629629,
+      "recall_macro": 0.9583333333333334,
+      "f1_macro": 0.9581699346405229,
+      "confusion_matrix": [
+        [
+          7,
+          0,
+          0
+        ],
+        [
+          0,
+          7,
+          1
+        ],
+        [
+          0,
+          0,
+          8
+        ]
+      ],
+      "class_names": [
+        "setosa",
+        "versicolor",
+        "virginica"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "model": "baseline",
+    "accuracy": 0.1037037037037037
+  },
+  {
+    "model": "LogisticRegression",
+    "accuracy": 0.9777777777777777
+  },
+  {
+    "model": "scratch MLP",
+    "accuracy": 0.9518518518518518
+  },
+  {
+    "model": "sklearn MLP",
+    "accuracy": 0.9814814814814815
+  }
+]
