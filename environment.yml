@@ -1,4 +1,4 @@
-name: intro-ml-ai
+name: aicourse
 channels:
   - conda-forge
   - defaults

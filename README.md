@@ -17,80 +17,80 @@ After finishing this course, you will be able to:
 
 ## Course Structure
 
-The course is organized into 18 chapters, divided into four progressive blocks:
+The course is organized into 19 chapters (numbered 0 to 18), divided into four progressive blocks:
 
 1. **Foundations (Ch 0-5)** — AI/ML/DL big picture, Python/NumPy, linear algebra, probability, optimization, ML pipeline.
-2. **Supervised learning (Ch 6-7, 11-12)** — Linear/Logistic/Softmax Regression, overfitting & regularization.
+2. **Supervised learning (Ch 6-7, 11-12)** — Linear/Logistic/Softmax Regression, overfitting and regularization.
 3. **Other classical methods (Ch 8-10, 13-16)** — KNN, K-means, Naive Bayes, Neural Networks, Recommender Systems, PCA/SVD, SVM.
 4. **Wrap-up (Ch 17-18)** — Model evaluation, error analysis, and a final end-to-end project.
 
 Full chapter list:
 
-1. Introduction to AI, ML, DL
-2. Python and NumPy for ML
-3. Linear Algebra for ML
-4. Probability and Parameter Estimation
-5. Gradient and Optimization
-6. Machine Learning Pipeline
-7. Linear Regression
-8. Overfitting and Regularization
-9. K-Nearest Neighbors
-10. K-means Clustering
-11. Naive Bayes
-12. Logistic Regression
-13. Softmax Regression
-14. Neural Networks
-15. Recommendation Systems
-16. PCA and SVD
-17. Support Vector Machines
-18. Model Evaluation and Error Analysis
-19. Final Project
+- Chapter 0 — Course Introduction
+- Chapter 1 — Python and NumPy for ML
+- Chapter 2 — Linear Algebra for ML
+- Chapter 3 — Probability and Parameter Estimation
+- Chapter 4 — Gradient and Optimization
+- Chapter 5 — Machine Learning Pipeline
+- Chapter 6 — Linear Regression
+- Chapter 7 — Overfitting and Regularization
+- Chapter 8 — K-Nearest Neighbors
+- Chapter 9 — K-means Clustering
+- Chapter 10 — Naive Bayes and Probabilistic Classification
+- Chapter 11 — Logistic Regression
+- Chapter 12 — Softmax Regression
+- Chapter 13 — Neural Networks
+- Chapter 14 — Recommendation Systems
+- Chapter 15 — PCA and SVD
+- Chapter 16 — Support Vector Machines
+- Chapter 17 — Model Evaluation and Error Analysis
+- Chapter 18 — Final Project
 
-See `ROADMAP.md` for per-chapter goals, content, outcomes, and the current build status.
+See `ROADMAP.md` for per-chapter goals, topics, outcomes, and repo artifacts.
 
 ## How to Use This Repo
 
-1. Read the chapter notes in `docs/`.
-2. Run the matching notebook in `notebooks/`.
-3. Solve the exercises in `assignments/`.
-4. Practice the integration labs in `labs/`.
-5. Tackle the mini-projects in `projects/` once the relevant chapters are done.
-6. Submit your capstone using the `projects/FINAL_PROJECT_TEMPLATE/` structure.
+The four top-level documents have distinct roles:
+
+- `README.md` — entry point: what the repo is, how to install, how to navigate.
+- `COURSE_OVERVIEW.md` — audience, prerequisites, and the design philosophy of the course.
+- `SYLLABUS.md` — a 12-week schedule that maps chapters to deliverables.
+- `ROADMAP.md` — chapter-by-chapter blueprint with goals, topics, outcomes, and the artifacts each chapter ships with.
 
 A typical learning loop per chapter:
 
-```
-docs/ NN_topic.md     →   notebooks/chapter_NN_topic.ipynb
-        │                          │
-        ▼                          ▼
-   read theory             run, edit, observe
-        │                          │
-        └─────► assignment / lab / mini-project ◄─────┘
-```
+1. Read the chapter note in `docs/`.
+2. Run the matching notebook in `notebooks/` and tweak the parameters.
+3. Solve the related exercise in `assignments/` or the integration lab in `labs/`.
+4. Once a block is finished, tackle the relevant mini-project in `projects/`.
+5. At the end of the course, submit your capstone using `projects/FINAL_PROJECT_TEMPLATE/`.
 
 ## Requirements
+
+Python 3.10 or newer is required.
+
+With pip:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Conda users can also do:
+With Conda:
 
 ```bash
 conda env create -f environment.yml
-conda activate intro-ml-ai
+conda activate aicourse
 ```
-
-Python 3.10 or newer is required.
 
 ## Repository Layout
 
 ```
 .
-├── README.md                # this file
-├── COURSE_OVERVIEW.md       # short pitch
-├── SYLLABUS.md              # week-by-week plan
+├── README.md                # this file: what the repo is, how to install
+├── COURSE_OVERVIEW.md       # audience, prerequisites, design philosophy
+├── SYLLABUS.md              # 12-week schedule with deliverables
 ├── ROADMAP.md               # chapter-by-chapter blueprint
+├── CONTRIBUTING.md          # guide for adding chapters, labs, projects
 ├── requirements.txt
 ├── environment.yml
 ├── LICENSE
@@ -100,7 +100,7 @@ Python 3.10 or newer is required.
 ├── labs/                    # integrative labs across chapters
 ├── projects/                # mini-projects and the final-project template
 ├── datasets/                # dataset documentation (large files not committed)
-├── src/                     # reusable Python utilities
+├── src/                     # notebook builders and reusable utilities
 ├── figures/                 # generated diagrams and plots
 └── reports/                 # written experiment reports
 ```

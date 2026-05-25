@@ -1,10 +1,10 @@
 # Roadmap
 
-Per-chapter blueprint for the entire course. Status column shows what is filled in this build vs. what is still a TODO placeholder.
+Per-chapter blueprint for the entire course. This file is the single source of truth for chapter goals, topics, learning outcomes, and the repo artifacts each chapter ships with.
 
-Legend: ✅ done · 🟡 partial · ⬜ todo
+Numbering matches the chapter folders in `docs/` and the names of the notebooks in `notebooks/`. Each chapter pairs a Markdown note in `docs/` with a runnable notebook and (where relevant) an assignment, a lab, or a mini-project.
 
-## Chapter 0 — Course Introduction · ✅
+## Chapter 0 — Course Introduction
 
 **Goal:** understand why Machine Learning matters for AI, what the final outcome of this course is, and how to use this repo.
 
@@ -16,7 +16,7 @@ Repo artifacts: `docs/00_course_introduction.md`, `figures/ai_ml_dl_relationship
 
 ---
 
-## Chapter 1 — Python and NumPy for ML · ✅
+## Chapter 1 — Python and NumPy for ML
 
 **Goal:** minimum programming skills to do ML in Python — NumPy, Pandas, Matplotlib, Jupyter.
 
@@ -28,7 +28,7 @@ Repo artifacts: `notebooks/chapter_00_python_numpy_warmup.ipynb`; `labs/lab_01_d
 
 ---
 
-## Chapter 2 — Linear Algebra for ML · ✅
+## Chapter 2 — Linear Algebra for ML
 
 **Goal:** absorb the linear-algebra concepts you will see again and again in ML.
 
@@ -40,7 +40,7 @@ Repo artifacts: `docs/01_math_foundation.md` (linear-algebra section); `notebook
 
 ---
 
-## Chapter 3 — Probability and Parameter Estimation · ✅
+## Chapter 3 — Probability and Parameter Estimation
 
 **Goal:** the probability foundation needed for Naive Bayes, loss functions, likelihood, uncertainty, and evaluation.
 
@@ -52,7 +52,7 @@ Repo artifacts: `docs/01_math_foundation.md` (probability section); `notebooks/c
 
 ---
 
-## Chapter 4 — Gradient and Optimization · ✅
+## Chapter 4 — Gradient and Optimization
 
 **Goal:** see why nearly every ML / DL model needs optimization and how gradient descent works.
 
@@ -64,7 +64,7 @@ Repo artifacts: `docs/01_math_foundation.md` (optimization section); `notebooks/
 
 ---
 
-## Chapter 5 — Machine Learning Pipeline · ✅
+## Chapter 5 — Machine Learning Pipeline
 
 **Goal:** get into the pipeline mindset before learning individual algorithms.
 
@@ -76,120 +76,154 @@ Repo artifacts: `docs/02_ml_concepts.md`; `notebooks/chapter_03_ml_pipeline.ipyn
 
 ---
 
-## Chapter 6 — Linear Regression · ✅
+## Chapter 6 — Linear Regression
 
-Goal: meet your first supervised model — linear regression. Foundation for understanding loss, parameter, optimization, prediction, and evaluation.
+**Goal:** meet your first supervised model — linear regression. Foundation for understanding loss, parameter, optimization, prediction, and evaluation.
 
-Topics: regression problem · linear model · MSE · normal equation (concept) · gradient descent for linear regression · feature scaling · MSE, RMSE, MAE, R² · from-scratch vs scikit-learn comparison.
+Topics: regression problem · linear model · MSE · normal equation (concept) · gradient descent for linear regression · feature scaling · MSE, RMSE, MAE, R-squared · from-scratch vs scikit-learn comparison.
 
-Repo artifacts: `docs/03_regression.md` (Part A); `notebooks/chapter_04_linear_regression.ipynb`; `projects/project_01_house_price_regression/` (worked sample project).
+Outcomes: write the linear model and its MSE loss; train it both from scratch and with scikit-learn; report the standard regression metrics on a held-out set.
+
+Repo artifacts: `docs/03_regression.md` (Part A); `notebooks/chapter_04_linear_regression.ipynb`; `projects/project_01_house_price_regression/`.
 
 ---
 
-## Chapter 7 — Overfitting and Regularization · ✅
+## Chapter 7 — Overfitting and Regularization
 
-Goal: model the difference between "good on training" and "good on test."
+**Goal:** model the difference between "good on training" and "good on test."
 
 Topics: under/overfitting · bias-variance tradeoff · train/val/test · cross-validation · L1, L2 regularization · early stopping (concept) · learning curve.
+
+Outcomes: recognize overfitting from a learning curve; apply Ridge and Lasso to a regression task; use k-fold cross-validation to pick a hyperparameter.
 
 Repo artifacts: `docs/03_regression.md` (Part B); `notebooks/chapter_05_overfitting_regularization.ipynb`; `labs/lab_04_model_selection.ipynb`.
 
 ---
 
-## Chapter 8 — K-Nearest Neighbors · ✅
+## Chapter 8 — K-Nearest Neighbors
 
-Goal: a simple, intuitive classifier that highlights the role of distance and feature scaling.
+**Goal:** a simple, intuitive classifier that highlights the role of distance and feature scaling.
+
+Topics: distance metrics · choice of k · weighted KNN · curse of dimensionality · why scaling matters · KNN for classification and regression.
+
+Outcomes: implement KNN on a 2-D toy dataset; show how `k` controls the bias-variance trade-off; explain why unscaled features ruin distance-based models.
 
 Repo artifacts: `docs/04_classification.md` (Part A); `notebooks/chapter_06_knn.ipynb`; `projects/project_02_iris_classification/`.
 
 ---
 
-## Chapter 9 — K-means Clustering · ✅
+## Chapter 9 — K-means Clustering
 
-Goal: introduce unsupervised learning via clustering.
+**Goal:** introduce unsupervised learning via clustering.
+
+Topics: clustering as unsupervised partitioning · K-means objective · Lloyd's algorithm · initialization (k-means++) · choosing k (elbow, silhouette) · failure modes.
+
+Outcomes: run K-means on a real dataset; pick `k` with the elbow method; explain why K-means is sensitive to scaling and initialization.
 
 Repo artifacts: `docs/05_clustering.md`; `notebooks/chapter_07_kmeans.ipynb`; `projects/project_03_customer_segmentation/`.
 
 ---
 
-## Chapter 10 — Naive Bayes and Probabilistic Classification · ✅
+## Chapter 10 — Naive Bayes and Probabilistic Classification
 
-Goal: use probability for classification on simple text data.
+**Goal:** use probability for classification on simple text data.
+
+Topics: Bayes' rule applied to classification · independence assumption · Gaussian and Multinomial Naive Bayes · smoothing · text-classification pipeline (bag-of-words).
+
+Outcomes: build a spam classifier end-to-end; explain when the independence assumption is reasonable; compare Naive Bayes against a Logistic Regression baseline.
 
 Repo artifacts: `docs/04_classification.md` (Part B); `notebooks/chapter_08_naive_bayes.ipynb`; `assignments/assignment_03_spam_classifier.ipynb`.
 
 ---
 
-## Chapter 11 — Logistic Regression · ✅
+## Chapter 11 — Logistic Regression
 
-Goal: linear classification with sigmoid output and cross-entropy loss.
+**Goal:** linear classification with sigmoid output and cross-entropy loss.
+
+Topics: sigmoid · decision boundary · cross-entropy loss · gradient for logistic regression · binary classification metrics (accuracy, precision, recall, F1, ROC-AUC) · confusion matrix.
+
+Outcomes: derive the gradient of the cross-entropy loss; train logistic regression with gradient descent and with scikit-learn; read a confusion matrix and a ROC curve.
 
 Repo artifacts: `docs/04_classification.md` (Part C); `notebooks/chapter_10_logistic_regression.ipynb`; `labs/lab_03_metrics_confusion_matrix.ipynb`.
 
 ---
 
-## Chapter 12 — Softmax Regression · ✅
+## Chapter 12 — Softmax Regression
 
-Goal: extend logistic regression from binary to multi-class.
+**Goal:** extend logistic regression from binary to multi-class.
+
+Topics: softmax function · multi-class cross-entropy · one-hot targets · multi-class confusion matrix · macro vs micro averaging.
+
+Outcomes: train a softmax classifier on a multi-class dataset; interpret per-class precision / recall / F1; explain why softmax is the natural extension of sigmoid.
 
 Repo artifacts: `docs/04_classification.md` (Part D); `notebooks/chapter_11_softmax_regression.ipynb`.
 
 ---
 
-## Chapter 13 — Neural Networks · ✅
+## Chapter 13 — Neural Networks
 
-Goal: intro neural networks as a bridge to Deep Learning.
+**Goal:** intro neural networks as a bridge to Deep Learning.
+
+Topics: perceptron · multi-layer perceptron · activation functions · forward pass · backpropagation (intuition + worked example) · MLP for classification.
+
+Outcomes: build a small MLP from scratch in NumPy; train it on a toy classification problem; explain the role of non-linear activations.
 
 Repo artifacts: `docs/06_neural_networks.md`; `notebooks/chapter_12_mlp_backpropagation.ipynb`; `projects/project_04_digit_classification/`.
 
 ---
 
-## Chapter 14 — Recommendation Systems · ✅
+## Chapter 14 — Recommendation Systems
 
-Goal: a real-world ML application — recommender systems.
+**Goal:** a real-world ML application — recommender systems.
+
+Topics: content-based filtering · collaborative filtering · user-item matrix · cosine similarity · matrix factorization (intuition) · cold-start problem.
+
+Outcomes: build a simple recommender on a movie / product dataset; compare content-based and collaborative approaches; describe the cold-start problem.
 
 Repo artifacts: `docs/recommender_systems.md`; `notebooks/chapter_13_recommender_system.ipynb`.
 
 ---
 
-## Chapter 15 — PCA and SVD · ✅
+## Chapter 15 — PCA and SVD
 
-Goal: dimensionality reduction motivation and intuition.
+**Goal:** dimensionality reduction motivation and intuition.
+
+Topics: motivation for dimensionality reduction · variance and projection · PCA as variance maximization · SVD relationship · explained variance ratio · visualization in 2-D.
+
+Outcomes: apply PCA to a real dataset; pick a number of components from the explained-variance curve; visualize high-dimensional data in 2-D.
 
 Repo artifacts: `docs/08_dimensionality_reduction.md`; `notebooks/chapter_14_pca_svd.ipynb`.
 
 ---
 
-## Chapter 16 — Support Vector Machines · ✅
+## Chapter 16 — Support Vector Machines
 
-Goal: a strong classifier built on margin and kernels.
+**Goal:** a strong classifier built on margin and kernels.
+
+Topics: margin and support vectors · linear SVM · soft margin · the kernel trick (intuition) · RBF kernel · SVM vs Logistic Regression.
+
+Outcomes: train an SVM with a linear and an RBF kernel; explain what the regularization parameter `C` controls; compare SVM against Logistic Regression on the same dataset.
 
 Repo artifacts: `docs/09_svm.md`; `notebooks/chapter_15_svm.ipynb`.
 
 ---
 
-## Chapter 17 — Model Evaluation and Error Analysis · ✅
+## Chapter 17 — Model Evaluation and Error Analysis
 
-Goal: tie evaluation skills together — choose the right metric, analyze errors, compare models.
+**Goal:** tie evaluation skills together — choose the right metric, analyze errors, compare models.
+
+Topics: choosing a metric for the problem · validation strategies · learning curves · error analysis · model comparison on a held-out test set.
+
+Outcomes: pick the right metric for a given problem (and defend the choice); run a structured error analysis on a chosen model; produce a clean model-comparison table.
 
 Repo artifacts: `docs/07_model_evaluation.md`; `labs/lab_05_error_analysis.ipynb`.
 
 ---
 
-## Chapter 18 — Final Project · ✅
+## Chapter 18 — Final Project
 
-Goal: apply everything to a complete end-to-end ML project.
+**Goal:** apply everything to a complete end-to-end ML project.
 
-Repo artifacts: `projects/FINAL_PROJECT_TEMPLATE/` (template ✅); `projects/sample_final_project_wine/` (worked example with builder script `src/build_sample_final_project_notebook.py`, executed notebook, figures, and `report.md`).
+Outcomes: deliver a reproducible project with EDA, split, baseline, model comparison, evaluation, error analysis, and a written report.
 
----
-
-## Build Phases
-
-This roadmap is filled in over five phases:
-
-- **Phase 1: Skeleton** — folders, templates, README, ROADMAP, SYLLABUS, requirements. ✅
-- **Phase 2: Foundations** — chapters 0-7 (intro, Python/NumPy, linear algebra, probability, optimization, ML pipeline, linear regression, overfitting). ✅
-- **Phase 3: Classical ML** — KNN, K-means, Naive Bayes, Logistic, Softmax, SVM. ✅
-- **Phase 4: Extensions** — Neural Networks, Recommender, PCA/SVD, model evaluation, error analysis. ✅
-- **Phase 5: Final-project polish** — sample project, rubric refinement, contributor guide. ✅
+Repo artifacts: `projects/FINAL_PROJECT_TEMPLATE/` (template); `projects/sample_final_project_wine/` (worked example with builder script `src/build_sample_final_project_notebook.py`, executed notebook, figures, and `report.md`).

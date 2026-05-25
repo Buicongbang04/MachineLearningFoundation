@@ -2,13 +2,19 @@
 
 **Intro Machine Learning for AI** is an open, hands-on curriculum that turns the Vietnamese textbook *Machine Learning cơ bản* (Vũ Hữu Tiệp) into an AI-Foundation course.
 
+This document covers the *why* of the course — audience, prerequisites, and design philosophy. For the *what* and *how*, see:
+
+- `README.md` — install instructions, repo layout, full chapter list.
+- `SYLLABUS.md` — a 12-week schedule with deliverables.
+- `ROADMAP.md` — chapter-by-chapter goals, topics, outcomes, and artifacts.
+
 ## Who this is for
 
 - CS, data-science, and software-engineering students starting in AI.
 - Self-learners who know basic Python and want a structured path.
 - Deep-learning learners who lack a solid classical ML and math foundation.
 - Anyone building an open-source course or teaching repository.
-- Aspiring AI Engineers / Data Scientists / ML Engineers.
+- Aspiring AI Engineers, Data Scientists, or ML Engineers.
 
 ## Prerequisites
 
@@ -31,7 +37,7 @@ Heavier math (linear algebra, probability, gradient, optimization) is revisited 
 
 - Explain how Machine Learning differs from traditional programming.
 - Recognize when a problem is regression, classification, clustering, or something else.
-- Tell when ML is the right tool — and when it isn't.
+- Tell when ML is the right tool — and when it is not.
 - Frame an ML task in terms of data, model, loss, and metric.
 - Train and evaluate models with scikit-learn correctly (no train-set evaluation).
 - Build an end-to-end pipeline that someone else can reproduce.
