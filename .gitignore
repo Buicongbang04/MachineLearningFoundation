@@ -56,5 +56,23 @@ reports/*.html
 reports/*.pdf
 !reports/.gitkeep
 
+# Generated project outputs (from `python src/train.py` runs)
+projects/*/results/*.json
+projects/*/results/*.csv
+projects/*/results/*.npy
+projects/*/results/*.pkl
+!projects/*/results/.gitkeep
+
+# Reference / source PDFs shared by the instructor (not redistributable)
+book_ML.pdf
+Instruction.pdf
+*.pdf
+!docs/**/*.pdf
+!reports/**/*.pdf
+
+# Claude / scratch metadata
+.claude/
+plan.md
+
 # Local-only
 *.local

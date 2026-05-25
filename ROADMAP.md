@@ -136,27 +136,27 @@ Repo artifacts: `docs/04_classification.md` (Part D); `notebooks/chapter_11_soft
 
 ---
 
-## Chapter 13 — Neural Networks · ⬜
+## Chapter 13 — Neural Networks · ✅
 
 Goal: intro neural networks as a bridge to Deep Learning.
 
-Repo artifacts (planned): `notebooks/chapter_12_mlp_backpropagation.ipynb`; `projects/project_04_digit_classification/`.
+Repo artifacts: `docs/06_neural_networks.md`; `notebooks/chapter_12_mlp_backpropagation.ipynb`; `projects/project_04_digit_classification/`.
 
 ---
 
-## Chapter 14 — Recommendation Systems · ⬜
+## Chapter 14 — Recommendation Systems · ✅
 
 Goal: a real-world ML application — recommender systems.
 
-Repo artifacts (planned): `notebooks/chapter_13_recommender_system.ipynb`.
+Repo artifacts: `docs/recommender_systems.md`; `notebooks/chapter_13_recommender_system.ipynb`.
 
 ---
 
-## Chapter 15 — PCA and SVD · ⬜
+## Chapter 15 — PCA and SVD · ✅
 
 Goal: dimensionality reduction motivation and intuition.
 
-Repo artifacts (planned): `notebooks/chapter_14_pca_svd.ipynb`.
+Repo artifacts: `docs/08_dimensionality_reduction.md`; `notebooks/chapter_14_pca_svd.ipynb`.
 
 ---
 
@@ -168,11 +168,11 @@ Repo artifacts: `docs/09_svm.md`; `notebooks/chapter_15_svm.ipynb`.
 
 ---
 
-## Chapter 17 — Model Evaluation and Error Analysis · ⬜
+## Chapter 17 — Model Evaluation and Error Analysis · ✅
 
 Goal: tie evaluation skills together — choose the right metric, analyze errors, compare models.
 
-Repo artifacts (planned): `labs/lab_05_error_analysis.ipynb`.
+Repo artifacts: `docs/07_model_evaluation.md`; `labs/lab_05_error_analysis.ipynb`.
 
 ---
 
@@ -191,5 +191,5 @@ This roadmap is filled in over five phases:
 - **Phase 1: Skeleton** — folders, templates, README, ROADMAP, SYLLABUS, requirements. ✅
 - **Phase 2: Foundations** — chapters 0-7 (intro, Python/NumPy, linear algebra, probability, optimization, ML pipeline, linear regression, overfitting). ✅
 - **Phase 3: Classical ML** — KNN, K-means, Naive Bayes, Logistic, Softmax, SVM. ✅
-- **Phase 4: Extensions** — Neural Networks, Recommender, PCA/SVD, model evaluation, error analysis. ⬜
+- **Phase 4: Extensions** — Neural Networks, Recommender, PCA/SVD, model evaluation, error analysis. ✅
 - **Phase 5: Final-project polish** — sample project, rubric refinement, contributor guide. ⬜
