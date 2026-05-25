@@ -29,7 +29,11 @@ cells = [
     code(
         "import sys\n"
         "from pathlib import Path\n"
-        "sys.path.insert(0, str(Path('..').resolve() / 'src'))\n"
+        "\n"
+        "PROJECT_DIR = Path('..').resolve()\n"
+        "FIG_DIR     = PROJECT_DIR / 'figures'\n"
+        "FIG_DIR.mkdir(exist_ok=True)\n"
+        "sys.path.insert(0, str(PROJECT_DIR / 'src'))\n"
         "\n"
         "import numpy as np\n"
         "import pandas as pd\n"
@@ -52,7 +56,9 @@ cells = [
         "for ax, f in zip(axes, FEATURE_NAMES):\n"
         "    ax.hist(df[f], bins=30, color='tab:blue', edgecolor='white')\n"
         "    ax.set_title(f, fontsize=9)\n"
-        "plt.tight_layout(); plt.show()"
+        "plt.tight_layout()\n"
+        "fig.savefig(FIG_DIR / 'feature_hist.png', dpi=120)\n"
+        "plt.show()"
     ),
     md("## 3. Scale features"),
     code(
@@ -78,7 +84,9 @@ cells = [
         "axes[1].plot(Ks, sils, marker='s', color='tab:orange')\n"
         "axes[1].set_xlabel('K'); axes[1].set_ylabel('silhouette'); axes[1].set_title('Silhouette')\n"
         "axes[1].grid(True, alpha=0.3)\n"
-        "plt.tight_layout(); plt.show()\n"
+        "plt.tight_layout()\n"
+        "fig.savefig(FIG_DIR / 'elbow_silhouette.png', dpi=120)\n"
+        "plt.show()\n"
         "\n"
         "best_K = Ks[int(np.argmax(sils))]\n"
         "print(f'best K by silhouette = {best_K}')"
@@ -105,6 +113,7 @@ cells = [
         "ax.set_xlabel('recency (days)'); ax.set_ylabel('annual spend ($k)')\n"
         "ax.set_title('Customer segments — spend vs recency')\n"
         "ax.legend(); ax.grid(True, alpha=0.3)\n"
+        "fig.savefig(FIG_DIR / 'clusters_spend_vs_recency.png', dpi=120, bbox_inches='tight')\n"
         "plt.show()"
     ),
     md(

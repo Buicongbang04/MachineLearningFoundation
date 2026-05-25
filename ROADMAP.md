@@ -176,11 +176,11 @@ Repo artifacts: `docs/07_model_evaluation.md`; `labs/lab_05_error_analysis.ipynb
 
 ---
 
-## Chapter 18 — Final Project · ⬜
+## Chapter 18 — Final Project · ✅
 
 Goal: apply everything to a complete end-to-end ML project.
 
-Repo artifacts: `projects/FINAL_PROJECT_TEMPLATE/` (template provided ✅); a sample completed project (planned).
+Repo artifacts: `projects/FINAL_PROJECT_TEMPLATE/` (template ✅); `projects/sample_final_project_wine/` (worked example with builder script `src/build_sample_final_project_notebook.py`, executed notebook, figures, and `report.md`).
 
 ---
 
@@ -192,4 +192,4 @@ This roadmap is filled in over five phases:
 - **Phase 2: Foundations** — chapters 0-7 (intro, Python/NumPy, linear algebra, probability, optimization, ML pipeline, linear regression, overfitting). ✅
 - **Phase 3: Classical ML** — KNN, K-means, Naive Bayes, Logistic, Softmax, SVM. ✅
 - **Phase 4: Extensions** — Neural Networks, Recommender, PCA/SVD, model evaluation, error analysis. ✅
-- **Phase 5: Final-project polish** — sample project, rubric refinement, contributor guide. ⬜
+- **Phase 5: Final-project polish** — sample project, rubric refinement, contributor guide. ✅

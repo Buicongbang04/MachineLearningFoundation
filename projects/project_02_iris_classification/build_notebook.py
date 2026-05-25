@@ -30,7 +30,10 @@ cells = [
         "import sys\n"
         "from pathlib import Path\n"
         "\n"
-        "sys.path.insert(0, str(Path('..').resolve() / 'src'))\n"
+        "PROJECT_DIR = Path('..').resolve()\n"
+        "FIG_DIR     = PROJECT_DIR / 'figures'\n"
+        "FIG_DIR.mkdir(exist_ok=True)\n"
+        "sys.path.insert(0, str(PROJECT_DIR / 'src'))\n"
         "\n"
         "import numpy as np\n"
         "import pandas as pd\n"
@@ -57,8 +60,10 @@ cells = [
     ),
     code(
         "from pandas.plotting import scatter_matrix\n"
-        "_ = scatter_matrix(df.iloc[:, :4], c=df['target'], figsize=(9, 9), diagonal='hist', alpha=0.6)\n"
+        "axes = scatter_matrix(df.iloc[:, :4], c=df['target'], figsize=(9, 9), diagonal='hist', alpha=0.6)\n"
         "plt.suptitle('Iris pairwise scatter', y=1.02)\n"
+        "fig = axes[0, 0].figure\n"
+        "fig.savefig(FIG_DIR / 'iris_scatter_matrix.png', dpi=120, bbox_inches='tight')\n"
         "plt.show()"
     ),
     md("## 3. Split (stratified) + scale"),
@@ -121,6 +126,7 @@ cells = [
         "        ax.text(j, i, cm[i, j], ha='center', va='center', color='black' if cm[i, j] < cm.max() * 0.5 else 'white')\n"
         "plt.colorbar(im, ax=ax)\n"
         "plt.tight_layout()\n"
+        "fig.savefig(FIG_DIR / 'confusion_matrix.png', dpi=120)\n"
         "plt.show()"
     ),
     md("## 8. Error analysis — which test samples were misclassified?"),

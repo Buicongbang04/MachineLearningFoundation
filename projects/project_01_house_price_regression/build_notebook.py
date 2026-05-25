@@ -35,6 +35,8 @@ cells = [
         "from pathlib import Path\n"
         "\n"
         "PROJECT_DIR = Path('..').resolve()\n"
+        "FIG_DIR     = PROJECT_DIR / 'figures'\n"
+        "FIG_DIR.mkdir(exist_ok=True)\n"
         "sys.path.insert(0, str(PROJECT_DIR / 'src'))\n"
         "\n"
         "import numpy as np\n"
@@ -70,6 +72,7 @@ cells = [
         "axes[1].set_title('Median house value across California')\n"
         "plt.colorbar(sc, ax=axes[1], label='MedHouseVal')\n"
         "plt.tight_layout()\n"
+        "fig.savefig(FIG_DIR / 'target_and_geography.png', dpi=120)\n"
         "plt.show()"
     ),
     md(
@@ -135,6 +138,7 @@ cells = [
         "axes[1].set_xlabel('residual'); axes[1].set_ylabel('count')\n"
         "axes[1].set_title('Residual distribution')\n"
         "plt.tight_layout()\n"
+        "fig.savefig(FIG_DIR / 'residuals.png', dpi=120)\n"
         "plt.show()"
     ),
     code(

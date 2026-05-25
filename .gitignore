@@ -63,6 +63,13 @@ projects/*/results/*.npy
 projects/*/results/*.pkl
 !projects/*/results/.gitkeep
 
+# Generated project figures (notebooks re-create these on every run)
+projects/*/figures/*.png
+projects/*/figures/*.jpg
+projects/*/figures/*.svg
+projects/*/figures/*.pdf
+!projects/*/figures/.gitkeep
+
 # Reference / source PDFs shared by the instructor (not redistributable)
 book_ML.pdf
 Instruction.pdf
@@ -76,3 +83,5 @@ plan.md
 
 # Local-only
 *.local
+
+Instruction.pdf

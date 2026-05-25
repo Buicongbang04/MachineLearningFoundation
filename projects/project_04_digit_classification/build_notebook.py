@@ -29,7 +29,11 @@ cells = [
     code(
         "import sys\n"
         "from pathlib import Path\n"
-        "sys.path.insert(0, str(Path('..').resolve() / 'src'))\n"
+        "\n"
+        "PROJECT_DIR = Path('..').resolve()\n"
+        "FIG_DIR     = PROJECT_DIR / 'figures'\n"
+        "FIG_DIR.mkdir(exist_ok=True)\n"
+        "sys.path.insert(0, str(PROJECT_DIR / 'src'))\n"
         "\n"
         "import numpy as np\n"
         "import pandas as pd\n"
@@ -86,7 +90,9 @@ cells = [
         "axes[1].plot(history['val_acc'])\n"
         "axes[1].set_xlabel('epoch'); axes[1].set_ylabel('val accuracy'); axes[1].set_title('Scratch MLP — val accuracy')\n"
         "axes[1].grid(True, alpha=0.3)\n"
-        "plt.tight_layout(); plt.show()"
+        "plt.tight_layout()\n"
+        "fig.savefig(FIG_DIR / 'training_curve.png', dpi=120)\n"
+        "plt.show()"
     ),
     md("## 6. Confusion matrix on the best model"),
     code(
@@ -102,6 +108,7 @@ cells = [
         "ax.set_xlabel('predicted'); ax.set_ylabel('actual')\n"
         "ax.set_title(f'{best_name} — confusion matrix')\n"
         "plt.colorbar(im, ax=ax)\n"
+        "fig.savefig(FIG_DIR / 'confusion_matrix.png', dpi=120, bbox_inches='tight')\n"
         "plt.show()"
     ),
     md("## 7. Visualize misclassified digits"),
@@ -118,7 +125,9 @@ cells = [
         "        ax.imshow(img, cmap='gray_r')\n"
         "        ax.set_title(f'true {d[\"y_test\"][i]} / pred {y_pred[i]}', fontsize=9)\n"
         "        ax.axis('off')\n"
-        "    plt.tight_layout(); plt.show()"
+        "    plt.tight_layout()\n"
+        "    fig.savefig(FIG_DIR / 'misclassified.png', dpi=120, bbox_inches='tight')\n"
+        "    plt.show()"
     ),
     md("## 8. Hyperparameter ablation (hidden size)"),
     code(
